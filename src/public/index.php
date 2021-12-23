@@ -166,6 +166,48 @@ asort($res_arr);
 
 print_r($res_arr);
 echo "<br/>";
+
+
+$week = [ "ru" =>[ 1=> 'Понедельник', 2=> 'Вторник', 3=> 'Среда', 4=> 'Четверг', 5=> 'Пятница', 6=>'Суббота', 7=> 'Воскресенье'],
+               "en"=> [1 =>'Monday', 2=>'Tuesday', 3=> 'Wednesday', 4=> 'Thursday', 5=> 'Friday', 6=> 'Saturday', 7=> 'Sunday']
+];
+echo $week['ru']['1'] . " " . "Это по-русски!","<br/>";
+echo $week['en']['3'] . " " . "Thi is English!","<br/>";
+
+$lang = 'ru';
+$day = 3;
+
+echo $week[$lang][$day];
+echo "<br/>";
+$arrOne = [1, 2, 3, 4, 5, 6,7,8,9,];
+foreach ($arrOne as $value) {
+    if ($value > 0 && $value < 4) {
+        echo "$value"  . ",";
+        echo "<br/>";
+    }elseif($value>3 && $value <= 6){
+        echo "$value"  . ",";
+    }elseif ($value>6 && $value < 10){
+        echo "$value" .",";
+        echo "<br/>";
+    }
+}
+$arrayNumber = [1,2,3,4,5,6,7,8,9,10];
+$index = 2;
+function arrayReplacement(array &$array, $key, $key2)
+{
+    if (isset($array[$key]) && isset($array[$key2])) {
+        list($array[$key], $array[$key2]) = array($array[$key2], $array[$key]);
+        return true;
+    }
+
+    return false;
+}
+arrayReplacement($arrayNumber,1,$index);
+print_r($arrayNumber) . "<br/>";
+
+
+
+
 ?>
 </body>
 </html>
