@@ -164,12 +164,12 @@
 <div class="form">
    <div>
         <form name='authorization' method='post' action='Form1.php'>
-            <label> <input class="buttonTwo" type='submit' value='Войти' > </label>
+            <label> <input class="buttonTwo" type='submit' value='Создание новостей' > </label>
         </form>
    </div>
     <div>
         <form name="registration" method="post" action="Form2.php">
-            <label> <input class="buttonTwo" type="submit" value="Регистрация"> </label>
+            <label> <input class="buttonTwo" type="submit" value="Простомтр новостей"> </label>
         </form>
     </div>
 </div>
@@ -244,7 +244,7 @@
 //
 //$object2->getSalary();
 //
-//$object2->getAge();
+//$object2->getAge();arrt
 
 
 
