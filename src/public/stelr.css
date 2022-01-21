@@ -1,0 +1,8 @@
+.error {
+    background-color: red;
+    margin: 10px;
+    width: 200px;
+}
+#button {
+    margin-left: 200px;
+}
