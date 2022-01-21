@@ -163,7 +163,7 @@
 <script src="script.js">  </script>
 <div class="form">
    <div>
-        <form name='authorization' method='post' action='Form1.php'>
+        <form name='authorization' method='post' action='addNews.php'>
             <label> <input class="buttonTwo" type='submit' value='Создание новостей' > </label>
         </form>
    </div>
