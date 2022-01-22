@@ -12,6 +12,7 @@
 $name=$description=$status=$text=$author=$image="";
 $nameError=$descriptionError=$statusError=$textError=$authorError=$imageError="";
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["name"])) {
         $nameError = "Введите имя!";
@@ -40,8 +41,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     if (empty($_POST["image"])) {
         $imageError = "Добавьте картинку";
-    } else {
-        $image = test_input($_POST["image"]);
     }
 }
 
@@ -58,11 +57,12 @@ function test_input($data) {
     <label> <p> Краткое описание: </p> <input name="description" type="text" minlength="20"></label>
         <div>* <?php echo $descriptionError;?></div>
     <label> <p> Дата создания: </p> <input name="date" datatype="ДД-ММ-ГГГГ" value="21-01-2022" min="21-01-2022" max="22-02-2022"> </label>
-    <label> <p> Статус: </p> <input name="status" type="radio" value="Черновик" >
-            <input name="status" type="radio" value="Опубликовано">
-    </label>
+     <p> Статус: </p> <input name="status" type="radio" value="Черновик" id="draft" >
+    <label for="draft"> Черновик </label>
+    <input name="status" type="radio" value="Опубликовано" id="published">
+    <label for="published">  Опубликовано </label>
         <div>* <?php echo $statusError;?></div>
-    <label> <p> Текст новости: </p> <input name="text" type="text" minlength="100"> </label>
+    <label> <p> Текст новости: </p>  <textarea name="text" minlength="100"></textarea>  </label>
         <div>* <?php echo $textError;?></div>
     <label> <p> Автор новости: </p> <input name="author" type="text"> </label>
         <div>* <?php echo $authorError;?></div>
@@ -73,3 +73,11 @@ function test_input($data) {
 
 </body>
 </html>
+<?php
+//$name = $_POST['name'];
+//$description = $_POST['description'];
+//$status = $_POST['status'];
+//$text = $_POST['text'];
+//$author = $_POST['author'];
+//$image = $_POST['image'];
+?>
